@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>thymeleaf</title>
+    <link rel="stylesheet" href="/css/main.css"/>
+</head>
+<body>
+<div id="global">
+    <form id="iform" th:action="@{/hello.html}" th:method="post" th:object="${confData}">
+        模拟配置开关修改：
+        <textarea  rows = "20" cols = "80" th:field = "*{content}" form = "iform" >... </textarea>
+
+        <input type = "submit" value = "Edit" />
+    </form>
+</div>
+</body>
+</html>
